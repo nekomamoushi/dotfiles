@@ -1,0 +1,15 @@
+aaron-bond.better-comments
+ahmadawais.shades-of-purple
+alefragnani.project-manager
+bungcip.better-toml
+donjayamanne.githistory
+eamodio.gitlens
+lamartire.git-indicators
+mechatroner.rainbow-csv
+ms-python.python
+ms-vscode.vs-keybindings
+njpwerner.autodocstring
+robertohuertasm.vscode-icons
+wesbos.theme-cobalt2
+sdras.night-owl
+yzhang.markdown-all-in-one
