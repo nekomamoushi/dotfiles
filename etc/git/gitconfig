@@ -1,0 +1,84 @@
+[alias]
+    a = add
+    #############
+    b = branch
+    ba = branch -a
+    bd = branch -d
+    br = branch -r
+    bc = rev-parse --abbrev-ref HEAD
+    #############
+    c = commit
+    ca = commit --amend
+    cm = commit -m
+    #############
+    cl = clone
+    #############
+    cp = cherry-pick
+    #############
+    co = checkout
+    cob = checkout -b
+    #############
+    d = diff
+    #############
+    f = fetch
+    fo = fetch origin
+    fu = fetch upstream
+    #############
+    l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    #############
+    m = merge
+    #############
+    ps = push
+    pso = push origin
+    psuo = push -u origin
+    psom = push origin master
+    psuom = push -u origin master
+    #############
+    pl = pull
+    #############
+    r = remote
+    rao = remote add origin
+    rau = remote add upstream
+    #############
+    s = status
+    sb = status -s -b
+    #############
+    t = tag
+    td = tag -d
+    #############
+    w = show
+    #############
+    mad = ! git ls-files --modified | xargs git add
+
+[core]
+    attributesfile = ~/.gitattributes
+    excludesfile = ~/.gitignore
+    editor = vim
+    autocrlf = input
+
+[color]
+    ui = auto
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+
+[user]
+    # Don't guess the user's identity.
+    # https://github.com/git/git/blob/90f7b16b3adc78d4bbabbd426fb69aa78c714f71/Documentation/config.txt#L2847-L2855
+    useConfigOnly = true
+
+[include]
+    # Load local configs.
+    # https://git-scm.com/docs/git-config#_includes
+    #
+    # [!] The following needs to remain at the end of this file in
+    #     order to allow any of the above configs to be overwritten
+    #     by the local ones
+    path = ~/.gitconfig.local

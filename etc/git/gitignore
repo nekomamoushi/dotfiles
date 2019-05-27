@@ -1,0 +1,55 @@
+#
+# https://www.gitignore.io
+#
+
+##################
+##### PYTHON #####
+##################
+
+# Compiled Python files
+__pycache__/
+*.pyc
+*.pyo
+
+# Pipenv
+*.lock
+
+# Setuptools distribution folder.
+dist/
+sdist/
+build/
+/*.egg-info
+*.egg
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+
+#################
+##### Linux #####
+#################
+
+# Swap files
+*~
+*.swp
+
+##################
+##### MAC OS #####
+##################
+
+# Folder view configuration files
+.DS_Store
+Desktop.ini
+
+# Thumbnail cache files
+._*
+Thumbs.db
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
