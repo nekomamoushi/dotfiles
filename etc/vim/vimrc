@@ -1,0 +1,139 @@
+
+
+" =============================================================================
+" 0. Essential
+" =============================================================================
+"{{{
+
+" Use Vim settings, rather then Vi settings (much better!).
+" This must be first, because it changes other options as a side effect.
+set nocompatible
+
+"}}}
+
+" =============================================================================
+" 1. Plugin Manager (Plug)
+" =============================================================================
+"{{{
+
+execute pathogen#infect()
+
+"}}}
+
+" =============================================================================
+" 2. General
+" =============================================================================
+"{{{
+
+syntax on
+filetype plugin indent on
+
+" ----------------------------
+" CODE FOLDING
+" - Use :za to fold
+" - Use :zM to fold everything
+" ----------------------------
+set foldmethod=marker               " press za to fold and za to unfold
+
+" --------
+" GENERAL
+" --------
+set backspace=indent,eol,start      " allow backspacing over everything in insert mode
+set number                          " display line number
+set nowrap                          " No Wrap Lines
+set hlsearch                        " Highlight search results
+set incsearch                       " Makes search act like search in modern browsers
+set magic                           " For regular expressions turn magic on
+set showmatch                       " Show matching brackets when text indicator is over them
+set matchtime=2                     " How many tenths of a second to blink when matching brackets
+set laststatus=2                    " Always show the status bar
+
+
+" ----------------
+" SWAP and BACKUP
+" ----------------
+set noswapfile                      " No swap file
+set nobackup                        " No automatic backups
+set nowb                            " No backup on overwrite
+
+" -------------
+" INDENTATION
+" -------------
+set expandtab                       " Use spaces instead of tabs
+set smarttab                        " Be smart when using tabs ;)
+set shiftwidth=4                    " 1 tab == 4 spaces
+set tabstop=4
+
+" --------
+" WILDMENU
+" --------
+set wildmenu                        " Turn on the WiLd menu
+set wildignore=*~
+set wildignore+=*.o,*.obj,*.so,*.a
+set wildignore+=*.pyc
+set wildignore+=*.png,*.jpg,*.gif"
+
+"}}}
+
+" =============================================================================
+" 3. Mappings
+" =============================================================================
+"{{{
+
+let mapleader = ","
+
+"}}}
+
+" =============================================================================
+" 4. Plugins
+" =============================================================================
+"{{{
+
+set noshowmode    " The second line showing the normal mode is hidden. Clean
+
+" Initialise lightline empty config
+let g:lightline = {'active':{'left':[], 'right':[]}}
+
+" left side lightline components
+let g:lightline.active.left = [
+  \  [ 'mode' ]
+  \  ]
+
+" Right side lightline components
+let g:lightline.active.right = [
+  \ [ 'lineinfo' ],
+  \ [ 'percent' ],
+  \ [ 'fileformat', 'fileencoding', 'filetype', 'charvaluehex' ]
+  \ ]
+
+let g:lightline.colorscheme = 'powerline'
+
+" =============================================================================
+
+nnoremap <leader>n :NERDTreeToggle<CR>
+
+let NERDTreeShowHidden=1            " Show hidden files
+
+" https://www.reddit.com/r/vim/comments/a4yzyt/g_characters_prefixing_directory_and_file_names/
+let g:NERDTreeNodeDelimiter = "\u00a0"
+
+let NERDTreeIgnore=[
+	\ '\.DS_Store',
+	\ '\.pyc',
+	\ '\~$',
+	\ '\.git',
+	\ ]
+
+" Open a NerdTree if no file is given as CLI argument
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" Close if the only remaining window is a nerdtree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" =============================================================================
+
+nnoremap <leader>t :TagbarToggle<CR>
+
+
+"}}}
