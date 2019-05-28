@@ -6,5 +6,8 @@
 
 ## Installation
 
+```
+git clone https://github.com/nekomamoushi/dotfiles
+```
 ## License
 The code is available under the [MIT](LICENSE.txt) license.
