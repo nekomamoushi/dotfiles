@@ -1,0 +1,70 @@
+# Login shell:
+#   ~/.zshenv -> /etc/profile -> ~/.zprofile -> /etc/zshrc -> ~/.zshrc -> /etc/zlogin -> ~/.zlogin
+
+
+# Contents {{{
+# _____________
+
+    # 1/ General
+    # 2/ History
+    # 3/ Path
+    # 4/ Zplug
+
+
+# 1/ General {{{
+# ==============
+
+# Default editor.
+export EDITOR="vim"
+
+# Prefer US English and use UTF-8 encoding.
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+
+# Explicit.
+export PYTHONDONTWRITEBYTECODE=True
+
+# Specify your defaults in this environment variable.
+export HOMEBREW_CASK_OPTS="--appdir=~/Applications"
+
+# Zsh home
+export ZSH_HOME="${HOME}/.dotfiles"
+#}}}
+
+# 2/ General {{{
+# ==============
+
+# Where to store command history
+export HISTFILE=~/.zsh_history
+
+# How many lines to store command history
+export HISTSIZE=100000
+export SAVEHIST=100000
+
+#}}}
+
+# 3/ Path {{{
+# ==============
+
+# In zsh, the $PATH variable is tied to the $path variable.
+# This makes the $path variable act like a set.
+typeset -U path
+
+# Add our directories.
+path=("/usr/local/bin" ${path})
+path=("${ZSH_HOME}/etc/bin" ${path})
+
+# Using the (N-/) glob qualifier we can remove paths that do not exist.
+path=($^path(N-/))
+
+
+#}}}
+
+# 4/ Zplug {{{
+# ==============
+
+export ZPLUG_HOME="/usr/local/opt/zplug"
+
+#}}}
+
+#}}}

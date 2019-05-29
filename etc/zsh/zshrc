@@ -1,0 +1,134 @@
+#!/usr/bin/env zsh
+
+# Contents {{{
+# _____________
+
+    # 1/ Zplug
+    # 2/ Aliases
+    # 3/ Functions
+    # 4/ Completion
+    # 5/ History
+    # 6/ Bindkeys
+    # 7/ Theme
+    # 8/ Fzf
+    # 9/ Local
+
+# 1/ Zplug {{{
+# ============
+
+source ${ZPLUG_HOME}/init.zsh
+
+# Powerline theme for ZSH
+zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
+
+# Fish-like auto-suggestions
+zplug "zsh-users/zsh-autosuggestions"
+
+# Fish-like syntax highlighting
+# - must be loaded after executing compinit command and sourcing other plugins (taken care of with `defer` option)
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
+
+# Zsh port of Fish shell's history search feature
+# - must be loaded after `zsh-users/zsh-syntax-highlighting`
+zplug "zsh-users/zsh-history-substring-search", defer:3
+
+# Install plugins if there are plugins that have not been installed
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+
+# Then, source plugins and add commands to $PATH
+zplug load
+
+#}}}
+
+# 2/ Aliases {{{
+# ==============
+
+source "${ZSH_HOME}/etc/zsh/zsh.d/aliases.zsh"
+
+# 3/ Functions {{{
+# ================
+
+source "${ZSH_HOME}/etc/zsh/zsh.d/aliases.zsh"
+
+# 4/ Completion {{{
+# =================
+
+# Improve autocompletion style
+zstyle ':completion:*' menu select # select completions with arrow keys
+zstyle ':completion:*' group-name '' # group results by category
+zstyle ':completion:::::' completer _expand _complete _ignored _approximate # enable approximate matches for completion
+
+#}}}
+
+# 5/ History {{{
+# ==============
+
+setopt auto_cd
+
+# allow multiple sessions to append to one history
+setopt append_history
+
+# treat ! special during command expansion
+setopt bang_hist
+
+# Write history in :start:elasped;command format
+setopt extended_history
+
+# expire duplicates first when trimming history
+setopt hist_expire_dups_first
+
+# When searching history, don't repeat
+setopt hist_find_no_dups
+
+# ignore duplicate entries of previous events
+setopt hist_ignore_dups
+
+# prefix command with a space to skip it's recording
+setopt hist_ignore_space
+
+# Remove extra blanks from each command added to history
+setopt hist_reduce_blanks
+
+# Don't execute immediately upon history expansion
+setopt hist_verify
+
+# Write to history file immediately, not when shell quits
+setopt inc_append_history
+
+# Share history among all sessions
+setopt share_history
+
+#}}}
+
+# 6/ Bindkeys {{{
+# ===============
+
+source "${ZSH_HOME}/etc/zsh/zsh.d/bindkeys.zsh"
+
+# 7/ Theme {{{
+# ============
+
+source "${ZSH_HOME}/etc/zsh/zsh.d/theme.zsh"
+
+#}}}
+
+# 8/ Fzf {{{
+# ==========
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+#}}}
+
+# 9/ Local {{{
+# ============
+
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
+#}}}
+
+#}}}
