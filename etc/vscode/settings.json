@@ -43,7 +43,7 @@
         "node_modules": true,
         "public": true,
         "tmp": true
-    }
+    },
 
     // Terminal
     "terminal.explorerKind": "external",
