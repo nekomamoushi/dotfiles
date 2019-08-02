@@ -1,15 +1,18 @@
 {
-    "workbench.colorTheme": "Hop Light",
-    "workbench.iconTheme": "material-icon-theme",
-
     // Editor
     "editor.fontFamily": "Iosevka",
     "editor.fontLigatures": true,
     "editor.fontWeight": "bold",
     "editor.fontSize": 14,
     "editor.tabSize": 4,
-    "editor.minimap.enabled": true,
+    "editor.minimap.enabled": false,
     "editor.detectIndentation": true,
+    "editor.renderWhitespace": "none",
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.cursorStyle": "block",
+
+    // Explorer
+    "explorer.confirmDelete": false,
 
     // Files
     "files.autoSave": "afterDelay",
@@ -45,7 +48,57 @@
         "tmp": true
     },
 
+    // Indent-Rainbow
+    "indentRainbow.updateDelay": 100, // 10 makes it super fast but may cost more resources
+
+    // Peacock
+    "peacock.affectActivityBar": true,
+    "peacock.affectStatusBar": true,
+    "peacock.affectTitleBar": false,
+    "peacock.favoriteColors": [
+        {
+            "name": "Angular Red",
+            "value": "#b52e31"
+        },
+        {
+            "name": "Auth0 Orange",
+            "value": "#eb5424"
+        },
+        {
+            "name": "Azure Blue",
+            "value": "#007fff"
+        },
+        {
+            "name": "Go Cyan",
+            "value": "#5dc9e2"
+        },
+        {
+            "name": "JavaScript Yellow",
+            "value": "#f9e64f"
+        },
+        {
+            "name": "Mandalorian Blue",
+            "value": "#1857a4"
+        },
+        {
+            "name": "React Blue",
+            "value": "#00b3e6"
+        },
+        {
+            "name": "Vue Green",
+            "value": "#42b883"
+        }
+    ],
+    "peacock.surpriseMeOnStartup": true,
+
     // Terminal
     "terminal.explorerKind": "external",
-    "terminal.external.osxExec": "iTerm.app"
+    "terminal.external.osxExec": "iTerm.app",
+
+    // Workbench
+    "workbench.colorTheme": "Noctis Azureus",
+    "workbench.iconTheme": "vscode-icons",
+    "vsicons.dontShowNewVersionMessage": true
 }
+
+
