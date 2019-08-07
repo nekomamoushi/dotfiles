@@ -54,7 +54,7 @@ source "${ZSH_HOME}/etc/zsh/zsh.d/aliases.zsh"
 # 3/ Functions {{{
 # ================
 
-source "${ZSH_HOME}/etc/zsh/zsh.d/aliases.zsh"
+source "${ZSH_HOME}/etc/zsh/zsh.d/functions.zsh"
 
 # 4/ Completion {{{
 # =================
