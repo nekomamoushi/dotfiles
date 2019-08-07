@@ -34,11 +34,13 @@ source "${BASHRC_DIR}/bash.d/exports.sh"
 # 4/ Aliases {{{
 # ==============
 
+source "${BASHRC_DIR}/../../aliases"
 source "${BASHRC_DIR}/bash.d/aliases.sh"
 
 # 5/ Functions {{{
 # ================
 
+source "${BASHRC_DIR}/../../functions"
 source "${BASHRC_DIR}/bash.d/functions.sh"
 
 # 6/ Completion {{{
