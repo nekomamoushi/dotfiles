@@ -1,13 +1,34 @@
 # @nekomamoushi does dotfiles
 
-![Screenshot](screenshot.png)
+## Installation
+
+Default Installation Directory
+
+```
+curl -LsS https://raw.github.com/nekomamoushi/dotfiles/master/get-dotfiles.sh | bash -s
+```
 
 ## Features
 
-## Installation
 
-```
-git clone https://github.com/nekomamoushi/dotfiles
-```
+## Screenshots
+
+### Terminal
+
+![Screenshot](terminal.png)
+
+### Iterm
+
+![Screenshot](iterm.png)
+
+### Sublime Text
+
+![Screenshot](sublime.png)
+
+### Visual Studio
+
+![Screenshot](vscode.png)
+
 ## License
-The code is available under the [MIT](LICENSE.txt) license.
+
+The code is available under the [MIT](LICENSE) license.
