@@ -3,6 +3,17 @@
 DOTFILES_DIRECTORY="${HOME}/.dotfiles"
 DOTFILES_TARBALL_URL="https://github.com/nekomamoushi/dotfiles/tarball/master"
 
+FILES_TO_SYMLINK=(
+    "etc/bash/bashrc"
+    "etc/bash/inputrc"
+    "etc/zsh/zshenv"
+    "etc/zsh/zshrc"
+    "etc/git/gitattributes"
+    "etc/git/gitconfig"
+    "etc/git/gitignore"
+    "etc/vim/vimrc"
+)
+
 RESET='\033[0m'
 BOLD='\033[1m'
 ITALIC='\033[3m'
@@ -63,6 +74,13 @@ download() {
     return 1
 }
 
+symlink () {
+    local source_path="$1"
+    local target_path="$2"
+
+    ln -s "${source_path}" "${target_path}" &> /dev/null
+}
+
 download_dotfiles() {
 
     local tmp_file=""
@@ -93,11 +111,30 @@ download_dotfiles() {
     rm -rf "${tmp_file}"
 }
 
+symlink_dotfiles () {
+
+    local dotfiles_dir="${1-$DOTFILES_DIRECTORY}"
+    dotfiles_dir="${dotfiles_dir//\~/$HOME}"
+
+    log "➜ Symlink Dotfiles"
+
+    for file in "${FILES_TO_SYMLINK[@]}"; do
+        target_filename="${HOME}/.$(basename "${file}")"
+        source_filename="${dotfiles_dir}/${file}"
+
+        # Symlink dotfiles
+        symlink "${source_filename}" "${target_filename}"
+        log_result $? "Symlink: ${target_filename} -> ${source_filename}"
+    done
+}
+
 main () {
     if [[ -z "$1" ]]; then
         download_dotfiles
+        symlink_dotfiles
     else
         download_dotfiles "$1"
+        symlink_dotfiles "$1"
     fi
 }
 
