@@ -15,19 +15,19 @@ curl -LsS https://raw.github.com/nekomamoushi/dotfiles/master/get-dotfiles.sh | 
 
 ### Terminal
 
-![Screenshot](terminal.png)
+![Screenshot](screenshots/terminal.png)
 
 ### Iterm
 
-![Screenshot](iterm.png)
+![Screenshot](screenshots/iterm.png)
 
 ### Sublime Text
 
-![Screenshot](sublime.png)
+![Screenshot](screenshots/sublime.png)
 
 ### Visual Studio
 
-![Screenshot](vscode.png)
+![Screenshot](screenshots/vscode.png)
 
 ## License
 
