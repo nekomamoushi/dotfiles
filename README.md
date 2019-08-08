@@ -10,6 +10,16 @@ curl -LsS https://raw.github.com/nekomamoushi/dotfiles/master/get-dotfiles.sh | 
 
 ## Features
 
+- bin
+- [cron](etc/cron/README.md)
+- git
+- python
+- bash
+- zsh
+- [sublime-text](etc/sublime/README.md)
+- themes
+- vim
+- [vscode](etc/vscode/README.md)
 
 ## Screenshots
 
