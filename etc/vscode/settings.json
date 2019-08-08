@@ -61,10 +61,6 @@
             "value": "#b52e31"
         },
         {
-            "name": "Auth0 Orange",
-            "value": "#eb5424"
-        },
-        {
             "name": "Azure Blue",
             "value": "#007fff"
         },
@@ -73,16 +69,12 @@
             "value": "#5dc9e2"
         },
         {
+            "name": "Java Blue-Gray",
+            "value": "#557c9b"
+        },
+        {
             "name": "JavaScript Yellow",
             "value": "#f9e64f"
-        },
-        {
-            "name": "Mandalorian Blue",
-            "value": "#1857a4"
-        },
-        {
-            "name": "React Blue",
-            "value": "#00b3e6"
         },
         {
             "name": "Vue Green",
@@ -90,6 +82,7 @@
         }
     ],
     "peacock.surpriseMeOnStartup": true,
+    "peacock.surpriseMeFromFavoritesOnly": true,
 
     // Terminal
     "terminal.explorerKind": "external",
