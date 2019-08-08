@@ -59,27 +59,29 @@ download() {
 
 download_dotfiles() {
 
-    log "➜ Download Dotfiles"
-
     local tmp_file=""
     local dotfiles_url="${DOTFILES_TARBALL_URL}"
     local dotfiles_dir="${1-$DOTFILES_DIRECTORY}"
     # If ~ as part of the variable, expand to $HOME
     dotfiles_dir="${dotfiles_dir//\~/$HOME}"
 
+    log "➜  Download Dotfiles"
+    log "    URL: ${dotfiles_url}"
+    log "    DIR: ${dotfiles_dir}"
+
     # Create temporary archive
     tmp_file="$(mktemp /tmp/XXXXX)"
 
     # Download dotfiles
     download "${dotfiles_url}" "${tmp_file}"
-    log_result $? "Download: ${dotfiles_url}"
+    log_result $? "Download dotfiles "
 
     # Create dotfiles directory
     mkdir -p "${dotfiles_dir}"
 
     # Extract archive in the `dotfiles` directory.
     tar -zxf "${tmp_file}" --strip-components 1 -C "${dotfiles_dir}"
-    log_result $? "Extract archive in ${dotfiles_dir}"
+    log_result $? "Extract dotfiles"
 
     # Delete temporary archive
     rm -rf "${tmp_file}"
