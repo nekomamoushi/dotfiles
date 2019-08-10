@@ -128,6 +128,34 @@ symlink_dotfiles () {
     done
 }
 
+bash_local () {
+    local local_bashrc="${HOME}/.bashrc.local"
+    touch "${local_bashrc}"
+}
+
+zsh_local () {
+    local local_zshrc="${HOME}/.zshrc.local"
+    touch "${file}"
+}
+
+git_local () {
+    local local_gitconfig="${HOME}/.gitconfig.local"
+    local config="
+[user]
+    name =
+    email =
+"
+    touch "${local_gitconfig}"
+    printf "%s\n" "${config}"  >> "${local_gitconfig}"
+}
+
+local_dotfiles () {
+    log "➜ Local Dotfiles"
+    bash_local
+    zsh_local
+    git_local
+}
+
 main () {
     if [[ -z "$1" ]]; then
         download_dotfiles
@@ -136,6 +164,7 @@ main () {
         download_dotfiles "$1"
         symlink_dotfiles "$1"
     fi
+    local_dotfiles
 }
 
 # -----------------------------------------------------------------------------
