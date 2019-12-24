@@ -103,5 +103,6 @@
   // Workbench
   "workbench.colorTheme": "Noctis Azureus",
   "workbench.iconTheme": "vscode-icons",
+  "workbench.settings.editor": "json",
   "vsicons.dontShowNewVersionMessage": true
 }
