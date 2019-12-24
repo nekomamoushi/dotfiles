@@ -1,3 +1,29 @@
+# Open vscode
+c() {
+  if [ $# -eq 0 ]; then
+    code .
+  else
+    code "$1"
+  fi
+}
+
+# Open sublime text
+s() {
+  if [ $# -eq 0 ]; then
+    subl .
+  else
+    subl "$1"
+  fi
+}
+
+# Open vim
+v() {
+  if [ $# -eq 0 ]; then
+    vim .
+  else
+    vim "$1"
+  fi
+}
 
 lowertr () { echo "$1" | tr '[:upper:]' '[:lower:]' ; }
 uppertr () { echo "$1" | tr '[:lower:]' '[:upper:]' ; }
