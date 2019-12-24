@@ -48,13 +48,11 @@ zplug load
 # 2/ Aliases {{{
 # ==============
 
-source "${ZSH_HOME}/etc/shell/aliases"
 source "${ZSH_HOME}/etc/shell/zsh/zsh.d/aliases.zsh"
 
 # 3/ Functions {{{
 # ================
 
-source "${ZSH_HOME}/etc/shell/functions"
 source "${ZSH_HOME}/etc/shell/zsh/zsh.d/functions.zsh"
 
 # 4/ Completion {{{
