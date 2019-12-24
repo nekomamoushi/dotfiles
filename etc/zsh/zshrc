@@ -48,12 +48,12 @@ zplug load
 # 2/ Aliases {{{
 # ==============
 
-source "${ZSH_HOME}/etc/shell/zsh/zsh.d/aliases.zsh"
+source "${ZSH_HOME}/etc/zsh/zsh.d/aliases.zsh"
 
 # 3/ Functions {{{
 # ================
 
-source "${ZSH_HOME}/etc/shell/zsh/zsh.d/functions.zsh"
+source "${ZSH_HOME}/etc/zsh/zsh.d/functions.zsh"
 
 # 4/ Completion {{{
 # =================
@@ -108,12 +108,12 @@ setopt share_history
 # 6/ Bindkeys {{{
 # ===============
 
-source "${ZSH_HOME}/etc/shell/zsh/zsh.d/bindkeys.zsh"
+source "${ZSH_HOME}/etc/zsh/zsh.d/bindkeys.zsh"
 
 # 7/ Theme {{{
 # ============
 
-source "${ZSH_HOME}/etc/shell/zsh/zsh.d/theme.zsh"
+source "${ZSH_HOME}/etc/zsh/zsh.d/theme.zsh"
 
 #}}}
 
