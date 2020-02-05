@@ -12,6 +12,7 @@ FILES_TO_SYMLINK=(
     "etc/git/gitconfig"
     "etc/git/gitignore"
     "etc/vim/vimrc"
+    "etc/editorconfig"
 )
 
 RESET='\033[0m'
