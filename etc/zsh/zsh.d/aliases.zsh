@@ -5,14 +5,11 @@ alias show_options='setopt'
 # COMMON
 # -----------------------------------------------------------------------------
 
-# List all files colorized in long format
-alias l="ls -lF -G"
+# Lists all files using exa in long format
+alias ls="exa -l"
 
 # List all files colorized in long format, including dot files
-alias ll="ls -laF -G"
-
-# List only directories
-alias lsd="ls -lF -G | grep '^d'"
+alias ll="exa -la"
 
 # Secure command
 alias cp='cp -iv'
