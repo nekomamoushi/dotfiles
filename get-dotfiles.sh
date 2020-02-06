@@ -4,10 +4,8 @@ DOTFILES_DIRECTORY="${HOME}/.dotfiles"
 DOTFILES_TARBALL_URL="https://github.com/nekomamoushi/dotfiles/tarball/master"
 
 FILES_TO_SYMLINK=(
-    "etc/shell/bash/bashrc"
-    "etc/shell/bash/inputrc"
-    "etc/shell/zsh/zshenv"
-    "etc/shell/zsh/zshrc"
+    "etc/zsh/zshenv"
+    "etc/zsh/zshrc"
     "etc/git/gitattributes"
     "etc/git/gitconfig"
     "etc/git/gitignore"
