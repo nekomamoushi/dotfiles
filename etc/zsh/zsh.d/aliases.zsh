@@ -16,10 +16,9 @@ alias cp='cp -iv'
 alias mv='mv -iv'
 alias mkdir='mkdir -pv'
 
-# Colored grep
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
+# Grep but Ag
+alias grep="ag"
+alias grepi="ag -i"
 
 # History
 alias h='history'
