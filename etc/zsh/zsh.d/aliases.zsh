@@ -67,3 +67,21 @@ alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && kil
 # Hide/show all desktop icons (useful when presenting)
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+
+# -----------------------------------------------------------------------------
+# NODE
+# -----------------------------------------------------------------------------
+
+# Local
+alias ni="npm install"
+alias nid="npm install --save-dev"
+alias nu="npm uninstall"
+alias nl="npm list"
+alias nout="npm outdated"
+
+# Global
+alias ngi="npm install -g"
+alias ngu="npm uninstall -g"
+alias ngl="npm list -g --depth 0"
+alias ngout="npm outdated -g"
+
