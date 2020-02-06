@@ -18,6 +18,9 @@
 
 source ${ZPLUG_HOME}/init.zsh
 
+# Zsh plugin for installing, updating and loading nvm
+zplug "lukechilds/zsh-nvm"
+
 # Fish-like auto-suggestions
 zplug "zsh-users/zsh-autosuggestions"
 
