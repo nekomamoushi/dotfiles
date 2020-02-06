@@ -127,14 +127,9 @@ symlink_dotfiles () {
     done
 }
 
-bash_local () {
-    local local_bashrc="${HOME}/.bashrc.local"
-    touch "${local_bashrc}"
-}
-
 zsh_local () {
     local local_zshrc="${HOME}/.zshrc.local"
-    touch "${file}"
+    touch "${local_zshrc}"
 }
 
 git_local () {
@@ -150,7 +145,6 @@ git_local () {
 
 local_dotfiles () {
     log "➜ Local Dotfiles"
-    bash_local
     zsh_local
     git_local
 }
