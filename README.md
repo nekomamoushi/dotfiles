@@ -18,7 +18,6 @@ curl -LsS https://raw.github.com/nekomamoushi/dotfiles/master/get-dotfiles.sh | 
 - [sublime-text](etc/sublime/README.md)
 - themes
 - vim
-- [vscode](etc/vscode/README.md)
 
 ## Screenshots
 
